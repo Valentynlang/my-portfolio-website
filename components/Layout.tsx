@@ -15,7 +15,7 @@ interface LayoutProps extends CommonProps {
   // Add specific props here
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, className }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <TopLeftImg />

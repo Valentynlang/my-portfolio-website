@@ -5,7 +5,7 @@ interface HeaderProps extends CommonProps {
   // Add specific props here
 }
 
-const Header: React.FC<HeaderProps> = ({ children, className }) => {
+const Header: React.FC<HeaderProps> = ({ children }) => {
   return <header className="absolute z-30 w-full flex items-center px-16 xl:px-0 xl:h-[90px]">Header</header>;
 };
 
