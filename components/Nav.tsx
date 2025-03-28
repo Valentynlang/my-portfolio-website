@@ -1,9 +1,7 @@
 import React from 'react';
-import { CommonProps } from '../types';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-// icons
 import {
   HiHome,
   HiUser,
@@ -13,11 +11,6 @@ import {
   HiEnvelope,
 } from 'react-icons/hi2';
 
-interface NavProps extends CommonProps {
-  // Add specific props here
-}
-
-// nav data
 export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
@@ -35,7 +28,7 @@ export const navData = [
   },
 ];
 
-const Nav: React.FC<NavProps> = ({ children }) => {
+const Nav: React.FC = () => {
   const router = useRouter();
   const pathname = router.pathname;
 

@@ -1,12 +1,6 @@
 import React from 'react';
-import { CommonProps } from '../types';
 
-interface CirclesProps extends CommonProps {
-  // Add specific props here
-}
-
-
-const Circles: React.FC<CirclesProps> = ({ children, className }) => {
+const Circles: React.FC = () => {
   return <div>Circles</div>;
 
 };

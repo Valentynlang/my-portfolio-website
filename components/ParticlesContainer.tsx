@@ -1,14 +1,10 @@
 import React from 'react';
-import { CommonProps } from '../types';
 import { Particles } from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { useCallback } from 'react';
 import { Engine } from 'tsparticles-engine';
-interface ParticlesContainerProps extends CommonProps {
-  // Add specific props here
-}
 
-const ParticlesContainer: React.FC<ParticlesContainerProps> = ({ children }) => {
+const ParticlesContainer: React.FC = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);

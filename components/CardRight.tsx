@@ -1,11 +1,6 @@
 import React from 'react';
-import { CommonProps } from '../types';
 
-interface CardRightProps extends CommonProps {
-  // Add specific props here
-}
-
-const CardRight: React.FC<CardRightProps> = ({ children, className }) => {
+const CardRight: React.FC = () => {
   return <div>Card Right</div>;
 };
 

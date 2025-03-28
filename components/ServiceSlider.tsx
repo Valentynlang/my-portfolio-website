@@ -1,6 +1,5 @@
+import { CommonProps } from '@/types';
 import React from 'react';
-import { CommonProps } from '../types';
-// icons
 import {
   RxCrop,
   RxPencil2,
@@ -9,11 +8,7 @@ import {
   RxRocket,
 } from "react-icons/rx";
 
-interface ServiceSliderProps extends CommonProps {
-  // Add specific props here
-}
 
-// data
 const serviceData = [
   {
     icon: <RxCrop />,
@@ -42,7 +37,7 @@ const serviceData = [
   },
 ];
 
-const ServiceSlider: React.FC<ServiceSliderProps> = ({ children, className }) => {
+const ServiceSlider: React.FC = () => {
   return <div>Service Slider</div>;
 };
 

@@ -12,7 +12,7 @@ const sora = Sora({
 });
 
 interface LayoutProps extends CommonProps {
-  // Add specific props here
+  
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

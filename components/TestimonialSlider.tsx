@@ -1,11 +1,5 @@
 import React from 'react';
-import { CommonProps } from '../types';
 
-interface TestimonialSliderProps extends CommonProps {
-  // Add specific props here
-}
-
-// testimonial data
 const testimonialData = [
   {
     image: '/t-avt-1.png',
@@ -30,7 +24,7 @@ const testimonialData = [
   },
 ];
 
-const TestimonialSlider: React.FC<TestimonialSliderProps> = ({ children, className }) => {
+const TestimonialSlider: React.FC = () => {
   return <div>Testimonial Slider</div>;
 };
 

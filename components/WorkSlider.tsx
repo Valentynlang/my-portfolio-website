@@ -1,11 +1,5 @@
 import React from 'react';
-import { CommonProps } from '../types';
 
-interface WorkSliderProps extends CommonProps {
-  // Add specific props here
-}
-
-// data
 const workSlides = {
   slides: [
     {
@@ -51,7 +45,7 @@ const workSlides = {
   ],
 };
 
-const WorkSlider: React.FC<WorkSliderProps> = ({ children, className }) => {
+const WorkSlider: React.FC = () => {
   return <div>Work Slider</div>;
 };
 
