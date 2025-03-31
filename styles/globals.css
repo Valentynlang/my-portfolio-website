@@ -18,6 +18,17 @@
   color: #f13024;
 }
 
+
+@media (max-width: 767px) {
+  body.about-page {
+    overflow-y: auto !important;
+  }
+  .about-page .page {
+    height: auto !important;
+
+  }
+}
+
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
