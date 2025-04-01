@@ -1,7 +1,6 @@
 import Circles from "@/components/Circles";
 import { fadeIn } from "@/variants";
 import { motion } from "framer-motion";
-import type { NextPage } from "next";
 import Bulb from "@/components/Bulb";
 import WorkSlider from "@/components/WorkSlider";
 

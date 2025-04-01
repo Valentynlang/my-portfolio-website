@@ -82,7 +82,6 @@ const WorkSlider: React.FC = () => {
                 <div className='relative flex items-center justify-center overflow-hidden group'>
                   <Image src={image.path} alt={image.title} width={500} height={300} />
                   
-                  {/* Overlay with link covering the entire area */}
                   <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#25A1F3] to-[#4BE0FF] opacity-0 group-hover:opacity-80 transition-all duration-700'>
                     <a 
                       href={image.link} 
