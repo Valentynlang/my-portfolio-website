@@ -1,19 +1,19 @@
 import React from 'react';
-import Header from './Header';
+import { Sora } from 'next/font/google';
 import Nav from './Nav';
+import Header from './Header';
 import TopLeftImg from './TopLeftImg';
-import { Poppins } from 'next/font/google';
 import Head from 'next/head';
 
-const poppins = Poppins({
+const sora = Sora({
   subsets: ['latin'],
-  variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  variable: '--font-sora',
 });
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className={`page bg-site text-white bg-cover bg-no-repeat ${poppins.variable} font-poppins relative`}>
+    <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
         <title>Portfolio - Creative Developer</title>
         <meta name="description" content="Professional portfolio showcasing creative development work" />
@@ -28,3 +28,4 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 export default Layout;
+
