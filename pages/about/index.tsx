@@ -148,30 +148,66 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto flex flex-col xl:flex-row gap-x-6 xl:mt-14 xl:ml-44">
+      <div className="container mx-auto flex flex-col xl:flex-row gap-x-6 xl:mt-8 xl:ml-44">
         <div className="flex flex-1 flex-col justify-center">
-        <h2 className="h2">Crafting <span className="text-accent">web solutions</span> that drive results.</h2>
-        <p className=" mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">For over three years, I've been dedicated to building scalable, high-performance web solutions across diverse industries.
-        </p>
+        <motion.h2 
+          variants={fadeIn('right', 0.2)} 
+          initial="hidden" 
+          animate="show" 
+          exit="hidden" 
+          className="h2"
+        >Crafting <span className="text-accent">impactful</span> web solutions brings results.</motion.h2>
+        <motion.p 
+          variants={fadeIn('right', 0.4)} 
+          initial="hidden" 
+          animate="show" 
+          exit="hidden" 
+          className=" mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+        >I have gained extensive experience working with companies of various scales, freelancing, and collaborating with startups. As an enthusiastic developer, I continuously explore and create a diverse range of applications—from robust business platforms to innovative digital projects.
+        </motion.p>
         
-        <div>
-          <div className="flex items-center flex-1 xl:gap-x-4">
-            <div className="relative flex-1 after:w-[1px] agter:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 " >
-              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+        <motion.div 
+          variants={fadeIn('right', 0.6)} 
+          initial="hidden" 
+          animate="show" 
+          exit="hidden" 
+          className="mb-4"
+        >
+          <div className="flex items-center flex-1 xl:gap-x-6">
+            <div className="counter-container " >
+              <div className="counter-number ">
+                <CountUp start={0} end={87} duration={5} /> +
+              </div>
+              <div className="counter-text  ">finished projects</div> 
+            </div>
+            <div className="counter-container " >
+              <div className="counter-number ">
+                <CountUp start={0} end={37} duration={5} /> +
+              </div>
+              <div className="counter-text  ">satisfied clients</div> 
+            </div>
+            <div className="relative flex-1  " >
+              <div className="counter-number ">
                 <CountUp start={0} end={4} duration={5} /> +
               </div>
-              <div className="text-xs uppercase tracking-[1px] leading-[1.4] ">Year of experience</div> 
+              <div className="counter-text ">Year of experience</div>
             </div>
           </div>
+        </motion.div>
         </div>
-        </div>
-        <div className="flex flex-col w-full xl:max-w-[48%] ">
+        <motion.div 
+          variants={fadeIn('left', 0.4)} 
+          initial="hidden" 
+          animate="show" 
+          exit="hidden" 
+          className="flex flex-col w-full xl:max-w-[48%] "
+        >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 my-2">
             {aboutData.map((item, itemIndex) => (
               <div 
                 key={itemIndex} 
                 className={`cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:bottom-1 after:left-0 ${
-                  itemIndex === index ? 'text-accent after:w-full after:bg-[#007FFF] after:transition-all after:duration-300' : ''
+                  itemIndex === index ? 'text-accent tab-active-blue' : ''
                 }`} 
                 onClick={() => setIndex(itemIndex)}
               >
@@ -193,7 +229,7 @@ const About = () => {
                   </>
                 )}
                 {hasIcons(item) && (
-                  <div className="flex gap-x-4">
+                  <div className="flex flex-wrap gap-x-4 gap-y-3 justify-center md:justify-start pt-2 md:pt-0">
                     {item.icons.map((icon, iconIndex) => (
                       <div key={iconIndex} className="text-2xl text-white">
                         {icon}
@@ -204,7 +240,7 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

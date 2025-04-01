@@ -14,7 +14,7 @@ const Home: NextPage = () => {
           Transforming ideas <br /> Into <span className='text-accent'>Digital-world</span>
         </motion.h1>
         <motion.p variants={fadeIn('down', 0.3)} initial='hidden' animate='show' exit='hidden' className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nostrum quam reprehenderit vero, tenetur, voluptatem nulla aut aspernatur dolores ut.
+          I specialize in creating modern web applications using advanced technologies. I turn complex ideas into elegant digital solutions by combining creative design and high quality development.
         </motion.p>
         <div className='flex justify-center xl:hidden relative '>
           <ProjectsBtn />

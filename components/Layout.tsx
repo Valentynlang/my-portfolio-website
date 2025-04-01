@@ -1,23 +1,24 @@
 import React from 'react';
-import { CommonProps } from '../types';
-import { Sora } from 'next/font/google';
-import Nav from './Nav';
 import Header from './Header';
+import Nav from './Nav';
 import TopLeftImg from './TopLeftImg';
+import { Poppins } from 'next/font/google';
+import Head from 'next/head';
 
-const sora = Sora({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
-  variable: '--font-sora',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-interface LayoutProps extends CommonProps {
-  
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
+    <div className={`page bg-site text-white bg-cover bg-no-repeat ${poppins.variable} font-poppins relative`}>
+      <Head>
+        <title>Portfolio - Creative Developer</title>
+        <meta name="description" content="Professional portfolio showcasing creative development work" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <TopLeftImg />
       <Nav />
       <Header />
