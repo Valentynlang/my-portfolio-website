@@ -11,8 +11,7 @@ const Testimonials = () => {
         >
           What clients <span className="text-accent">say.</span>
         </motion.h2>
-        <motion.div variants={fadeIn('up', 0.4)} initial='hidden' animate='show' exit='hidden'
-          className="flex flex-col xl:flex-row gap-x-8"
+        <motion.div variants={fadeIn('up', 0.2)} initial='hidden' animate='show' exit='hidden'
         >
           <TestimonialSlider />
         </motion.div>
