@@ -29,7 +29,6 @@ import {
 } from "react-icons/si";
 import CountUp from "react-countup";
 
-// Define types for our data structure
 type SkillItem = {
   title: string;
   icons: ReactNode[];

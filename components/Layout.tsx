@@ -16,7 +16,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
         <title>Portfolio - Creative Developer</title>
-        <meta name="description" content="Professional portfolio showcasing creative development work" />
+        <meta name="description" content="Professional portfolio showcasing creative development work and services" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="developer, portfolio, creative, web development, services" />
+        <meta property="og:title" content="Portfolio - Creative Developer" />
+        <meta property="og:description" content="Professional portfolio showcasing creative development work" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <TopLeftImg />
