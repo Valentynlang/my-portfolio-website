@@ -15,22 +15,22 @@ const workSlides = {
       images: [
         {
           title: 'title',
-          path: '/thumb1.png',
+          path: '/thumb1.webp',
           link: 'https://www.thebrentfordproject.com/',
         },
         {
           title: 'title',
-          path: '/thumb2.png',
+          path: '/thumb2.webp',
           link: 'https://www.yourcodesoul.com/',
         },
         {
           title: 'title',
-          path: '/thumb1.png',
+          path: '/thumb1.webp',
           link: 'https://www.thebrentfordproject.com/',
         },
         {
           title: 'title',
-          path: '/thumb2.png',
+          path: '/thumb2.webp',
           link: 'https://www.yourcodesoul.com/',
         },
       ],
@@ -39,22 +39,22 @@ const workSlides = {
       images: [
         {
           title: 'title',
-          path: '/thumb2.png',
+          path: '/thumb2.webp',
           link: 'https://www.yourcodesoul.com/',
         },
         {
           title: 'title',
-          path: '/thumb1.png',
+          path: '/thumb1.webp',
           link: 'https://www.thebrentfordproject.com/',
         },
         {
           title: 'title',
-          path: '/thumb2.png',
+          path: '/thumb2.webp',
           link: 'https://www.yourcodesoul.com/',
         },
         {
           title: 'title',
-          path: '/thumb1.png',
+          path: '/thumb1.webp',
           link: 'https://www.thebrentfordproject.com/',
         },
       ],
