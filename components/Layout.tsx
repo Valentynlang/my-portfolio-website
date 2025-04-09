@@ -18,8 +18,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <title>Portfolio - Creative Developer</title>
         <meta name="description" content="Professional portfolio showcasing creative development work and services" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="developer, portfolio, creative, web development, services" />
-        <meta property="og:title" content="Portfolio - Creative Developer" />
+        <meta name="keywords" content="developer, portfolio, creative, web development, services, next, nuxt, react, vue, javascript, typescript" />
+        <meta property="og:title" content="Valentyn Zadonskyi - Creative Developer" />
         <meta property="og:description" content="Professional portfolio showcasing creative development work" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
