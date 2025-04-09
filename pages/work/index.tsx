@@ -14,6 +14,7 @@ const Work = () => {
             <motion.h2 className="h2 xl:mt-12"
               initial='hidden'
               animate='show'
+              exit='hidden'
               variants={fadeIn('up', 0.2)}
             >
               My Work<span className="text-accent">.</span>
@@ -21,6 +22,7 @@ const Work = () => {
             <motion.p className="max-w-[400px] leading-normal"
               initial='hidden'
               animate='show'
+              exit='hidden'
               variants={fadeIn('up', 0.4)}
             >
               I specialize in creating modern web applications using advanced technologies. I turn complex ideas into elegant digital solutions by combining creative design and high quality development.
@@ -29,6 +31,7 @@ const Work = () => {
           <motion.div className="w-full xl:max-w-[65%]"
             initial='hidden'
             animate='show'
+            exit='hidden'
             variants={fadeIn('up', 0.6)}
           >
             <WorkSlider />
