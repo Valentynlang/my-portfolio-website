@@ -15,7 +15,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <Head>
-        <title>Portfolio - Creative Developer</title>
+        <title>Valentyn Zadonskyi - Creative Developer</title>
         <meta name="description" content="Professional portfolio showcasing creative development work and services" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="developer, portfolio, creative, web development, services, next, nuxt, react, vue, javascript, typescript" />
