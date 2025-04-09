@@ -16,7 +16,7 @@ const socialLinks = [
 
 const Socials: React.FC = () => {
   return (
-    <nav className='flex items-center gap-x-5 text-lg'>
+    <nav className='bg-[#0D0F57]/40 backdrop-blur-xs flex items-center gap-x-5 text-lg rounded-full px-4 py-2'>
       {socialLinks.map(({ id, icon: Icon, url, label }) => (
         <Link 
           key={id}

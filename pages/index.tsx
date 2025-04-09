@@ -24,13 +24,13 @@ const Home: NextPage = () => {
         </motion.div>
       </div>
     </div>
-    <div className='w-full  h-full absolute right-0 bottom-0'>
+    <div className='w-full h-full absolute right-0 bottom-0'>
       <ParticlesContainer />
     </div>
 
-      <div className='md:w-[80%] right-0 bottom-0 bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'></div>
+      <div className='md:w-[65%] opacity-50 -right-6 bottom-0 xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 bg-gradient-to-t from-transparent via-primary/30 to-transparent'></div>
 
-      <motion.div variants={fadeIn('up', 0.4)} initial='hidden' animate='show' exit='hidden' transition={{ duration: 0.8, ease: 'easeInOut' }} className='w-full h-full max-w-[700px] max-h-[641px] absolute -bottom-32 lg:bottom-10  lg:right-[2%] '>
+      <motion.div variants={fadeIn('up', 0.4)} initial='hidden' animate='show' exit='hidden' transition={{ duration: 0.8, ease: 'easeInOut' }} className='w-full h-full max-w-[700px] max-h-[641px] absolute -bottom-32 lg:bottom-10 lg:right-[2%] '>
         <Avatar />
       </motion.div>
 

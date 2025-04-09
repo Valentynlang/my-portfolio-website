@@ -136,7 +136,7 @@ const About = () => {
     'stage' in item;
 
   return (
-    <div className="min-h-screen xl:py-32  py-24 mt-2 msx-w-[90%] text-center xl:text-left bg-primary/30">
+    <div className="min-h-screen xl:py-32  py-24 msx-w-[90%] text-center xl:text-left bg-primary/60">
       <Circles />
       <motion.div 
         variants={fadeIn('right', 0.2)} 

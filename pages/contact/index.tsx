@@ -127,15 +127,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center h-full justify-center">
-        <div className="flex flex-col w-full max-w-[700px]">
+    <div className="h-full min-h-screen bg-primary/30">
+      <div className="container mx-auto py-16 md:py-32 text-center xl:text-left flex items-center justify-center">
+        <div className="flex flex-col w-full max-w-[700px] px-4 md:px-0">
           <motion.h2 
             variants={fadeIn("up", 0.2)} 
             initial="hidden" 
             animate="show" 
             exit="hidden" 
-            className="h2 mb-8 text-center"
+            className="h2 mb-4 md:mb-8 text-center"
           >
             Let's <span className="text-accent">connect.</span>
           </motion.h2>
@@ -160,7 +160,7 @@ const Contact = () => {
                   className={`focus:border-white/20 input w-full ${nameFieldEmpty ? 'border-red-500 placeholder-red-500' : formData.name ? 'border-white' : ''}`}
                 />
               </div>
-              <div className="flex-1 relative mt-4 md:mt-0">
+              <div className="flex-1 relative ">
                 {emailError && emailTouched && emailError !== 'please fill out this field' && (
                   <div className="text-red-500 text-left text-xs md:text-sm absolute -top-6 left-0 w-full">{emailError}</div>
                 )}
@@ -181,7 +181,7 @@ const Contact = () => {
               value={formData.subject}
               onChange={handleSubjectChange}
               placeholder="subject" 
-              className={`focus:border-white/20 input ${formData.subject ? 'border-white' : ''}`}
+              className={`focus:border-white/20 z-10 input ${formData.subject ? 'border-white' : ''}`}
             />
             <div className="relative">
               <textarea 
@@ -193,7 +193,7 @@ const Contact = () => {
                 className={`textarea focus:border-white/20 ${messageFieldEmpty ? 'border-red-500 placeholder-red-500' : formData.message ? 'border-white' : ''}`}
               />
             </div>
-            <div className="relative">
+            <div className="relative mb-10 md:mb-0">
               <button 
                 type="submit" 
                 className="w-full btn rounded-full border border-white/50 px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
@@ -205,10 +205,10 @@ const Contact = () => {
                 <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
               </button>
               {status === 'error' && (
-                <p className="text-red-500 text-sm absolute -bottom-8 left-0">Failed to send message. Please try again.</p>
+                <p className="text-red-500 text-sm absolute -bottom-8 md:-bottom-8 left-0 right-0 md:left-0 md:right-auto text-center md:text-left">Failed to send message. Please try again.</p>
               )}
               {status === 'success' && (
-                <p className="text-green-500 text-sm absolute -bottom-8 left-0">Message sent successfully!</p>
+                <p className="text-green-500 text-sm absolute -bottom-8 md:-bottom-8 left-0 right-0 md:left-0 md:right-auto text-center md:text-left">Message sent successfully!</p>
               )}
             </div>
           </motion.form>

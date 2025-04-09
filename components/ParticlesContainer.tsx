@@ -51,10 +51,10 @@ const ParticlesContainer: React.FC = () => {
         },
         particles: {
           color: {
-            value: '#00B9E8',
+            value: '#0C8AFF',
           },
           links: {
-            color: '#6CB4EE',
+            color: '#0088FF',
             distance: 150,
             enable: true,
             opacity: 0.5,
