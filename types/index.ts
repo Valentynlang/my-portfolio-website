@@ -13,14 +13,6 @@ export interface SlideData {
   path?: string;
 }
 
-export interface TestimonialData {
-  id: number;
-  name: string;
-  position: string;
-  avatar?: string;
-  text: string;
-}
-
 export interface WorkData {
   id: number;
   title: string;
@@ -40,4 +32,4 @@ export interface SocialLink {
   id: number;
   url: string;
   icon: ReactNode;
-} 
+}

@@ -7,7 +7,7 @@ This is a modern portfolio website built with Next.js, TypeScript, and Tailwind 
 - Responsive design that works on all devices
 - Smooth animations using Framer Motion
 - Interactive background with tsparticles
-- Testimonial and work sliders using Swiper
+- Work sliders using Swiper
 
 ## Getting Started
 
