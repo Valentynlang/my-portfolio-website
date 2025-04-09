@@ -7,62 +7,66 @@ import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 import { BsArrowRight } from 'react-icons/bs';
 
+interface Project {
+  title: string;
+  path: string;
+  link: string;
+}
 
+const allProjects: Project[] = [
+  {
+    title: 'Brentford Project',
+    path: '/thumb1.webp',
+    link: 'https://www.thebrentfordproject.com/',
+  },
+  {
+    title: 'yourcodesoul',
+    path: '/thumb2.webp',
+    link: 'https://www.yourcodesoul.com/',
+  },
+  {
+    title: 'Alison',
+    path: '/thumb3.webp',
+    link: 'https://alison.com/',
+  },
+  {
+    title: 'Leboncoin',
+    path: '/thumb4.webp',
+    link: 'https://www.leboncoin.fr/',
+  },
+  {
+    title: 'Fixly',
+    path: '/thumb5.webp',
+    link: 'https://fixly.pl/',
+  },
+  {
+    title: 'Doktor',
+    path: '/thumb6.webp',
+    link: 'https://doktor.se/',
+  },
+  {
+    title: 'GLS Group',
+    path: '/thumb7.webp',
+    link: 'https://gls-group.eu/',
+  },
+  {
+    title: 'Lieferando',
+    path: '/thumb8.webp',
+    link: 'https://www.lieferando.de/en',
+  },
+];
 
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/thumb1.webp',
-          link: 'https://www.thebrentfordproject.com/',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.webp',
-          link: 'https://www.yourcodesoul.com/',
-        },
-        {
-          title: 'title',
-          path: '/thumb1.webp',
-          link: 'https://www.thebrentfordproject.com/',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.webp',
-          link: 'https://www.yourcodesoul.com/',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/thumb2.webp',
-          link: 'https://www.yourcodesoul.com/',
-        },
-        {
-          title: 'title',
-          path: '/thumb1.webp',
-          link: 'https://www.thebrentfordproject.com/',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.webp',
-          link: 'https://www.yourcodesoul.com/',
-        },
-        {
-          title: 'title',
-          path: '/thumb1.webp',
-          link: 'https://www.thebrentfordproject.com/',
-        },
-      ],
-    },
-  ],
+const groupProjects = (projects: Project[], groupSize: number = 4): Project[][] => {
+  const groups: Project[][] = [];
+  for (let i = 0; i < projects.length; i += groupSize) {
+    groups.push(projects.slice(i, i + groupSize));
+  }
+  return groups;
 };
 
 const WorkSlider: React.FC = () => {
+  const projectGroups = groupProjects(allProjects);
+  
   return <Swiper 
   spaceBetween={10}
   pagination={{
@@ -72,13 +76,13 @@ const WorkSlider: React.FC = () => {
   modules={[Pagination]}
   className='h-[280px] sm:h-[480px]'
 >
-  {workSlides.slides.map((slide, index) => {
+  {projectGroups.map((group, groupIndex) => {
     return (
-      <SwiperSlide key={index}>
+      <SwiperSlide key={groupIndex}>
         <div className='grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer'>
-          {slide.images.map((image, index) => {
+          {group.map((image, imageIndex) => {
             return (
-              <div className='relative rounded-lg overflow-hidden flex items-center justify-center group' >
+              <div className='relative rounded-lg overflow-hidden flex items-center justify-center group' key={`${groupIndex}-${imageIndex}`}>
                 <div className='relative flex items-center justify-center overflow-hidden group'>
                   <Image src={image.path} alt={image.title} width={500} height={300} />
                   
